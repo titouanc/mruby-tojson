@@ -41,7 +41,7 @@ class Hash
     each do |key, val|
       io.write ',' if i > 0
 
-      key.to_json io
+      key.to_s.to_json io
       io.write ':'
       val.to_json io
       i += 1
